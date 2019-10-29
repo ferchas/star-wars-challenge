@@ -1,6 +1,6 @@
 @import '../../styles/environment.css';
 
-.characters-page {
+.character-page {
   display: flex;
   justify-content: center;
   margin-top: $headerTop;
@@ -15,7 +15,7 @@
 }
 
 @media only screen and (min-width: $minScreen) {
-  .characters-page {
+  .character-page {
     margin-top: unset;
     
     aside {

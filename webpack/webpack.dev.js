@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../public'),
     filename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -46,8 +47,6 @@ module.exports = {
     new webpack.SourceMapDevToolPlugin({
       filename: '[name].map',
       exclude: ['vendor.js'],
-      // append: '\n//# sourceMappingURL=[url]',
-      // publicPath: '/',
     }),
     new CopyWebpackPlugin([
       {

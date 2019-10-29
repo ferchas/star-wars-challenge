@@ -7,7 +7,8 @@ const films = (category = null) => {
       title: d.title || '',
       director: d.director || '',
       episode: d.episode_id || '',
-      characters: d.characters.length || 0
+      characters: d.characters.length || 0,
+      filmId: d.url.slice(-2).replace('/','') || 1,
     })))
     .catch((err) => {
       console.log(err);

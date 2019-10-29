@@ -12,6 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../public'),
     filename: '[name].[hash].js',
+    publicPath: '/',
   },
   optimization: {
     splitChunks: {
@@ -51,7 +52,7 @@ module.exports = {
   devtool: false,
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new MiniCssExtractPlugin({ filename: '[name].[hash]css' }),
+    new MiniCssExtractPlugin({ filename: '/[name].[hash]css' }),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../images'),

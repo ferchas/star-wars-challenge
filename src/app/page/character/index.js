@@ -5,7 +5,7 @@ import Headlines  from '../../components/headlines';
 
 import './style.css';
 
-class characters extends Component {
+class character extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,10 +19,10 @@ class characters extends Component {
   render() {
     return (
       <Layout>
-        <div className="characters-page">
+        <div className="character-page">
           <aside>
             <h3>Filter</h3>
-            <p>{this.state.categoryFilter}</p>
+            <p></p>
           </aside>
           <article>
             { 
@@ -36,4 +36,4 @@ class characters extends Component {
   }
 } 
 
-export default characters;
+export default character;

@@ -19,7 +19,7 @@ class header extends React.Component {
         </div>
       
         <div className="header_user">
-          <img src="./images/user.svg" className="icon-fa icon-user"/>
+          <img src="/images/user.svg" className="icon-fa icon-user"/>
           <span>
             {user || 'Usuario'}
           </span>

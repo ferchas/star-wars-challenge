@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './style.css'; 
 
 const getCharacters = (listURL) => {} 
@@ -10,7 +11,7 @@ const Headlines = (props) => (
         <h3>{art.title}</h3>
         <p> Director: {art.director}</p>
         <p> Episodio: {art.episode_id}</p>
-        <p> Personajes:  <a target="_blank">{art.characters}</a> </p>
+        <p> Personajes:  <Link to={`/character/${art.filmId}`}>{art.characters}</Link> </p>
       </div>
     </div>
   )
