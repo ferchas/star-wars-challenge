@@ -1,0 +1,61 @@
+@import '../../styles/environment.css';
+
+.articles {
+  display: flex;
+  margin: 8px;
+
+  &-image {
+    height: 100px;
+    width: 150px;
+    min-width: 150px;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  &-content {
+    margin: 2px 15px;
+
+    h3 {
+      font-size: 16px;
+      margin: 0;
+      cursor: pointer;
+      
+      &:hover {
+        color: #a59d9d;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+}
+
+@media only screen and (min-width: $minScreen) {
+  .articles {
+    margin: 37px;
+
+    &-image {
+      height: 150px;
+      width: 200px;
+      min-width: 200px;
+    }
+
+    &-content {
+      margin: 4px 30px;
+      width: 72%;
+  
+      h3 {
+        font-size: 28px;
+      }
+      
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

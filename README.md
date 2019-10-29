@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Client render React
 
-## Available Scripts
+[![Dependency Status](https://david-dm.org/cloverfield-tools/universal-react-boilerplate.svg)](https://david-dm.org/cloverfield-tools/universal-react-boilerplate)
+[![devDependency Status](https://david-dm.org/cloverfield-tools/universal-react-boilerplate/dev-status.svg)](https://david-dm.org/cloverfield-tools/universal-react-boilerplate#info=devDependencies)
+[![Travis-CI](https://travis-ci.org/cloverfield-tools/universal-react-boilerplate.svg?branch=master)](https://travis-ci.org/cloverfield-tools/universal-react-boilerplate)
 
-In the project directory, you can run:
+# Requirements 
 
-### `npm start`
+## Home Page:
+*  Lista de Films
+*  Cada film debe tener la siguiente información: Nombre,  Número de episodio , Director
+*  Personajes: Enlace que me permita ir a la página de personajes del film
+*  Adicional: Al hacer click sobre el nombre del film se debe mostrar el textos con que inicia el film -opening_crawl-. (Las animaciones serán de nuestro agrado) https://media.giphy.com/media/2UCCiILkXaLbDbrjll/giphy.gif
+ 
+## Página de Personajes
+* Lista de Personajes
+* Limitar 10 personajes por página
+* Cada Personaje en la lista debe mostrar las siguientes características: Nombre, Color de Ojos, Género, Lista de Films,asociados al Personaje (Nombres), Considere que cada nombre del film asociado al personaje puede mostrar el Texto con que inicia el film (Mismo comportamiento a como está el requerimiento anterior)
+* Se espera los siguientes Filtros: Color de Ojos, Género, Film
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ES6 updates
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Rewritten from the ground up for ES6 + React with Babel and webpack.
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+npm run dist
+npm run start
+```
 
-### `npm run build`
+Now the app should be running at http://localhost:8000/
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Considerations
+Need to be a Single Page Application
+Need to be PWA
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Scripts
 
-### `npm run eject`
+The `package.json` file comes with the following scripts that you may find useful:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* `npm start` runs a client-only production
+* `npm run start-dev` run develop mode
+* `npm run watch` runs a dev console that reports lint and unit test errors on save
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run a script, open the terminal, navigate to the boilerplate directory, and type:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+npm run <name of script>
+```

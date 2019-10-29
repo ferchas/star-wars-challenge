@@ -1,0 +1,79 @@
+@import '../../styles/environment.css';
+
+.home-page {
+  .menu {
+    width: 44px;
+    height: 44px;
+    z-index: 9;
+    position: absolute;
+    top: 22px;
+    margin-left: 5px;
+  }
+  
+  nav {
+    padding: 0 10px;
+    background-color: #ccc;
+    z-index: 9;
+    position: fixed;
+    top: $headerTop;
+    height: 100%;
+    transition: 0.2s;
+    transition-timing-function: ease-in;
+    transform: translateX(0);
+
+    ul {
+      padding: 0;
+
+      li {
+        cursor: pointer;
+        padding: 10px;
+        list-style: none;
+
+        &:hover { 
+          background-color: rgb(196, 196, 164);
+        }
+      }
+    }
+  }
+
+  .close {
+    display: none;
+    transform: translateX(-130%);
+    transition-timing-function: ease-out;
+    transition: 0.2s;
+  }
+
+  article {
+    width: 100%;
+    margin-top: 116px;
+  }
+}
+
+@media only screen and (min-width: $minScreen) {
+  .home-page {
+    display: flex;
+    justify-content: center;
+
+    .menu {
+      display: none;
+    }
+
+    nav {
+      background-color: unset;
+      z-index: unset;
+      position: unset;
+      top: unset;
+    }
+
+    .close {
+      display: block;
+      transform: translateX(0%);
+    }
+
+    article {
+      width: 80%;
+      max-width: 1800px;
+      margin-top: unset;
+    }
+  }
+}
