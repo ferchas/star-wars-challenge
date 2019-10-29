@@ -3,29 +3,23 @@ import React,  { Component }  from 'react';
 import Layout from '../../components/layout';
 import Headlines  from '../../components/headlines';
 
-import headlines from '../../services/headlines';
-
 import './style.css';
 
-class Home extends Component {
+class characters extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoryFilter: null,
-      headlines: null,
     };
   }
 
   componentDidMount() {
-    const { categoryFilter } = this.props.match.params
-    this.setState({ categoryFilter });
-    headlines(categoryFilter).then(data => this.setState({ headlines: data}));
+  
   }
 
   render() {
     return (
       <Layout>
-        <div className="category-filter-page">
+        <div className="characters-page">
           <aside>
             <h3>Filter</h3>
             <p>{this.state.categoryFilter}</p>
@@ -42,4 +36,4 @@ class Home extends Component {
   }
 } 
 
-export default Home;
+export default characters;
