@@ -16,10 +16,10 @@ jobs:
           command: npm install
       - run: 
           name: Run Lint
-          command:
+          command: 
             OUTPUT="$(npm run lint)";
             echo $OUTPUT | wc -c;
-            if [[ $($OUTPUT | wc -c) > 23170 ]]; then
+            if [[ $($OUTPUT | wc -c) -gt 14169 ]]; then
               echo $OUTPUT;
               exit 1;
             else
