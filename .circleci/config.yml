@@ -18,7 +18,8 @@ jobs:
           name: Run Lint
           command: 
             OUTPUT="$(npm run lint)";
-            echo $OUTPUT | wc -c;
+            echo "Line:";
+            echo ${#OUTPUT}
             if [[ ${#OUTPUT} -gt 14169 ]]; then
               echo $OUTPUT;
               exit 1;
