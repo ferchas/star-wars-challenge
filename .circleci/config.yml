@@ -18,10 +18,9 @@ jobs:
           name: Run Lint
           command: 
             OUTPUT="$(npm run lint)";
-            echo "Line:";
-            echo ${#OUTPUT}
+            echo "Line :";
+            echo ${#OUTPUT};
             if [[ ${#OUTPUT} -gt 14169 ]]; then
-              echo $OUTPUT;
               exit 1;
             else
               echo "Pass";
