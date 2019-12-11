@@ -18,9 +18,10 @@ jobs:
           name: Run Lint
           command: 
             OUTPUT="$(npm run lint)";
-            echo "Error lint :";
-            echo ${#OUTPUT};
+           
             if [[ ${#OUTPUT} -gt 22395 ]]; then
+              echo "Error lint:";
+              echo ${#OUTPUT};
               exit 1;
             else
               echo "Pass";
