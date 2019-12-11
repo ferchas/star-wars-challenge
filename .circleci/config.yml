@@ -16,8 +16,9 @@ jobs:
           command: npm install
       - run: 
           name: Run Lint
-          command: |
-            OUTPUT="$(npm run lint)" |
+          command:
+            OUTPUT="$(npm run lint)";
+            echo $OUTPUT | wc -c;
             if [[ $($OUTPUT | wc -c) > 23170 ]]; then
               echo $OUTPUT;
               exit 1;
