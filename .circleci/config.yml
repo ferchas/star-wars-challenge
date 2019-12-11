@@ -17,11 +17,11 @@ jobs:
       - run:
           name: Eslint
           command:
-            OUTPUT="$(npm run lint)"
+            OUTPUT="$(npm run lint)";
             if [[ $($OUTPUT | wc -c) > 23170 ]]; then
-              echo $OUTPUT; exit 1
+              echo $OUTPUT; exit 1;
             else
-              echo "Pased"
+              echo "Pased";
             fi
 
 workflows:
