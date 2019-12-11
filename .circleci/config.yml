@@ -12,9 +12,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install-npm
+          name: Install npm
           command: npm install
-      - run: |
+      - run: 
+          name: Run Lint
+          command:
             OUTPUT="$(npm run lint)";
             if [[ $($OUTPUT | wc -c) > 23170 ]]; then
               echo $OUTPUT;
