@@ -1,0 +1,26 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true,
+      "browser": true
+    },
+    "plugins": [
+      "react",
+      "postcss-modules"
+    ],
+    "extends": [
+      "standard",
+      "standard-react"
+    ],
+    "rules": {
+      "react/prop-types": "error",
+      "import/no-absolute-path": "off",
+      "import/export": "error",
+      "import/first": "error",
+      "import/exports-last": "error",
+      "import/newline-after-import": "error",
+      "postcss-modules/no-undef-class": "error",
+      "postcss-modules/no-unused-class": "warn"
+    }
+  }
+  
