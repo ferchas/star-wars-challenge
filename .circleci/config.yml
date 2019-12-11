@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.14.2
+    steps:
+      - checkout
+      - run: echo "Build app"
+  lint:
+    docker:
+      - image: circleci/node:10.14.2
+    steps:
+      - checkout
+      - run:
+          name: Install npm
+          command: npm install
+      - run: 
+          name: Run Lint
+          command: 
+            OUTPUT="$(npm run lint)";
+            echo $OUTPUT | wc -c;
+            if [[ ${#OUTPUT} -gt 14169 ]]; then
+              echo $OUTPUT;
+              exit 1;
+            else
+              echo "Pass";
+            fi
+
+workflows:
+  version: 2
+  build_and_lint:
+    jobs:
+      - build
+      - lint
